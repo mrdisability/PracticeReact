@@ -1,19 +1,31 @@
 import { Card, Badge } from "react-bootstrap";
+import ExpenseTitleDate from "./ExpenseTitleDate";
+//import MyCard from "./MyCard"
 
 //Must have only one root element
 //Looks like html but its specific jsx syntax created by react team
+//Always remember ;, this aint Kotlin
 function ExpenseItem(props) {
-    const expenseDate = new Date();
-    const title = "Practice React";
-    const price = 100;
+    // const month = props.date.toLocaleString('en-US', { month: 'long' });
+    // const day = props.date.toLocaleString('en-US', { day: '2-digit' });
+    // const year = props.date.getFullYear();
 
+    //Remember to use {} Angular is {{}}
+    //width: '25rem'
     return (
        <div>
-           <Card style={{ width: '25rem', background: '#DCDCDC' }}>
+           <Card style={{ background: '#DCDCDC' }}>
             <Card.Body>
-                <Card.Title>
-                    {props.title} <Badge style={{ float: 'right' }} bg="secondary">{props.date.toISOString()}</Badge>
-                </Card.Title>
+                {/* <Card.Title>
+                    {props.title} 
+                    <Badge style={{ float: 'right' }} bg="secondary">
+                        {month} {day}, {year}
+                    </Badge>
+                </Card.Title> */}
+                <ExpenseTitleDate
+                    date={props.date}
+                    title={props.title}
+                ></ExpenseTitleDate>
                 <Card.Text>
                    ${props.amount}
                 </Card.Text>
