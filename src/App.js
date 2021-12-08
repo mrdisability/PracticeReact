@@ -1,6 +1,6 @@
 import './App.css';
-import Expenses from './components/Expenses';
-import ExpenseTitleDate from './components/ExpenseTitleDate';
+import Expenses from './components/Expenses/Expenses';
+//import ExpenseTitleDate from './components/ExpenseTitleDate';
 
 //Component is just a javascript function
 function App() {

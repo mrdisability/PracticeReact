@@ -16,12 +16,6 @@ function ExpenseItem(props) {
        <div>
            <Card style={{ background: '#DCDCDC' }}>
             <Card.Body>
-                {/* <Card.Title>
-                    {props.title} 
-                    <Badge style={{ float: 'right' }} bg="secondary">
-                        {month} {day}, {year}
-                    </Badge>
-                </Card.Title> */}
                 <ExpenseTitleDate
                     date={props.date}
                     title={props.title}
@@ -37,3 +31,10 @@ function ExpenseItem(props) {
 
 //Export to use outside of this file
 export default ExpenseItem;
+
+/* <Card.Title>
+    {props.title} 
+    <Badge style={{ float: 'right' }} bg="secondary">
+        {month} {day}, {year}
+    </Badge>
+</Card.Title> */
