@@ -4,6 +4,27 @@ import './Expenses.css'
 //React is all about components
 //Html, jsx and css
 function Expenses(props) {
+  //props is to send through data to other components  
+  const expenses = [
+    {
+      id: '1',
+      title: 'Title',
+      amount: 100,
+      date: new Date()
+    },
+    {
+      id: '2',
+      title: 'Title',
+      amount: 100,
+      date: new Date()
+    },
+    {
+      id: '3',
+      title: 'Title',
+      amount: 100,
+      date: new Date()
+    }
+  ]
     return (
        <div className="container-fluid">
          <div className="row">
@@ -13,19 +34,19 @@ function Expenses(props) {
               Expenses
             </h1>
             <ExpenseItem
-              title={props.expenses[0].title}
-              amount={props.expenses[0].amount}
-              date={props.expenses[0].date}
+              title={expenses[0].title}
+              amount={expenses[0].amount}
+              date={expenses[0].date}
             ></ExpenseItem>
             <ExpenseItem
-              title={props.expenses[1].title}
-              amount={props.expenses[1].amount}
-              date={props.expenses[1].date}
+              title={expenses[1].title}
+              amount={expenses[1].amount}
+              date={expenses[1].date}
             ></ExpenseItem>
             <ExpenseItem
-              title={props.expenses[2].title}
-              amount={props.expenses[2].amount}
-              date={props.expenses[2].date}
+              title={expenses[2].title}
+              amount={expenses[2].amount}
+              date={expenses[2].date}
             ></ExpenseItem>
           </div>
           <div className="col-md-2"></div>
@@ -35,3 +56,9 @@ function Expenses(props) {
 }
 
 export default Expenses;
+
+{/* <ExpenseItem
+title={props.expenses[0].title}
+amount={props.expenses[0].amount}
+date={props.expenses[0].date}
+></ExpenseItem> */}
