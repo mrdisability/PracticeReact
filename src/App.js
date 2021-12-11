@@ -10,8 +10,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import ReactMeals from './components/ReactMeals';
+import ToDos from './components/ToDos/ToDos';
 
-export default function BasicExample() {
+export default function App() {
   return (
     <Router>
       <div>
@@ -28,16 +30,20 @@ export default function BasicExample() {
                 <Link className='nav-link' to="/">Home</Link>
               </li>
               <li class="nav-item">
-              <Link className='nav-link' to="/practice">Practice</Link>
+                <Link className='nav-link' to="/react_meals">ReactMeals</Link>
+              </li>
+              <li class="nav-item">
+                <Link className='nav-link' to="/to_dos">ToDos</Link>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      
+
         <Routes>
           <Route exact path="/" element={<Home />}/>
-          <Route exact path="/practice" element={<Expenses />}/>
+          <Route exact path="/react_meals" element={<ReactMeals />}/>
+          <Route exact path="/to_dos" element={<ToDos />}/>
         </Routes>
       </div>
     </Router>

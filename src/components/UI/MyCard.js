@@ -6,6 +6,7 @@ function MyCard(props) {
     const classes = "mycard " + props.className;
 
     //Use props.children to allow this component to the root element like div
+    //To get access to wrap content
     return <div className={classes}>{props.children}</div>;
 }
 
