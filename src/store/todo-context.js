@@ -8,3 +8,10 @@ const ToDoContext = createContext({
 });
 
 export default ToDoContext;
+
+// const toDoContext = {
+//     toDos: toDoState.toDos,
+//     total: toDoState.total,
+//     addToDo: addToDoHandler,
+//     removeToDo: removeToDoHandler
+// };

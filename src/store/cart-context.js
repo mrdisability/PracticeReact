@@ -9,3 +9,10 @@ const CartContext = createContext({
 });
 
 export default CartContext;
+
+// const cartContext = {
+//     items: cartState.items,
+//     totalAmount: cartState.totalAmount,
+//     addItem: addItemToCartHandler,
+//     removeItem: removeItemFromCartHandler
+// };

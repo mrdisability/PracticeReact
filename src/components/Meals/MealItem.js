@@ -15,6 +15,8 @@ const MealItem = props => {
             amount: amount,
             price: props.price
         });
+
+        console.log(cartContext)
     };
 
     //Get values through props
