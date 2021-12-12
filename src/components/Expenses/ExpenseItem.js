@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { Card, Badge, Button } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import ExpenseTitleDate from "./ExpenseTitleDate";
 //import MyCard from "./MyCard"
 

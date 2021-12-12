@@ -1,5 +1,4 @@
 import { useContext, useRef, useState } from "react";
-//import ToDoForm from "./ToDoForm";
 import ToDoItem from "./ToDoItem";
 import ToDoContext from "../../store/todo-context"
 import { v4 as uuidv4 } from 'uuid';
@@ -29,15 +28,6 @@ const ToDos = () => {
     const toDosList = toDoItems
         .map(toDo => <ToDoItem key={toDo.id} id={toDo.id} toDo={toDo.toDo}></ToDoItem>)
 
-    // const addToDoHandler = toDo => {
-    //     const id = uuidv4();
-
-    //     toDoContext.addToDo({
-    //         id: id,
-    //         toDo: toDo
-    //     });
-    // };
-
     const submitHandler = event => {
         event.preventDefault();
 
@@ -59,13 +49,30 @@ const ToDos = () => {
 
         console.log(newToDo)
 
-        //Not sure why context is not working but everything looks right
-        // toDoContext.addToDo(newToDo);
+        //setToDoItems(prevState => [...prevState, newToDo])
 
-        setToDoItems(prevState => [...prevState, newToDo])
+        //Not sure why context is not working but everything looks right
+        //toDoContext.addToDo(newToDo);
     };
 
-    //Have to wrap with provider to use context all over website
+    const onAddToDoHandler = toDo => {
+        //console.log(toDo);
+
+        const id = uuidv4();
+
+        const newToDo = {
+            id: id,
+            toDo: toDo
+        };
+
+        setToDoItems(prevState => [...prevState, newToDo])
+
+        // toDoContext.addToDo({
+        //     id: '3',
+        //     name: newToDo
+        // });
+    };
+
     return <ToDoProvider>
         <div className="row">
                 <div className="col-md-2"></div>
@@ -73,9 +80,9 @@ const ToDos = () => {
                     <h1>ToDos</h1>
                     <ul class="list-group">{toDosList}</ul>
 
-                    {/* <ToDoForm onAddToDo={addToDoHandler} /> */}
+                    <ToDoForm  onAddToDo={onAddToDoHandler}/>
                     
-                    <form style={{marginTop: '20px'}} class="row g-2" onSubmit={submitHandler}>
+                    {/* <form style={{marginTop: '20px'}} class="row g-2" onSubmit={submitHandler}>
                         <div className="col-auto col-md-8">
                         <input ref={toDoInputRef} type="text"
                             class="form-control" id="amount" placeholder="Enter ToDo" />
@@ -84,7 +91,7 @@ const ToDos = () => {
                     </form>
                     {!toDoIsValid&& <div class="alert alert-danger" role="alert">
                             Please enter a todo.
-                    </div>}
+                    </div>} */}
 
                 </div>
                 <div className="col-md-2"></div>
