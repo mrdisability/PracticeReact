@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import ReactMeals from './components/ReactMeals';
 import ToDos from './components/ToDos/ToDos';
+import ReduxTodos from './components/ToDos/ReduxTodos';
 
 export default function App() {
   return (
@@ -43,7 +44,7 @@ export default function App() {
         <Routes>
           <Route exact path="/" element={<Home />}/>
           <Route exact path="/react_meals" element={<ReactMeals />}/>
-          <Route exact path="/to_dos" element={<ToDos />}/>
+          <Route exact path="/to_dos" element={<ReduxTodos />}/>
         </Routes>
       </div>
     </Router>
