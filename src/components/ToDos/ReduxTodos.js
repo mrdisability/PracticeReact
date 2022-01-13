@@ -1,10 +1,10 @@
 import { Fragment, useEffect } from 'react';
-import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
+//import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
 import { useSelector, useDispatch } from 'react-redux';
 import Notification from '../../components/UI/Notification';
-import { sendToDoData, fetchToDoData } from '../../store/todo-actions';
+import { fetchToDoData } from '../../store/todo-actions';
 
-let isInitial = true;
+//let isInitial = true;
 
 function ReduxTodos() {
   const dispatch = useDispatch();
@@ -33,7 +33,7 @@ function ReduxTodos() {
 
         <ul className='list-group'>
             {Object.keys(toDos).map((key, index) => (
-                <li class="list-group-item" key={key}>
+                <li className="list-group-item" key={key}>
                     {toDos[key].todo}
                 </li>
             ))}  

@@ -27,7 +27,7 @@ import {
     try {
       const res = await TodoDataService.getAll();
 
-      console.log(res.data);
+      //console.log(res.data);
   
       dispatch({
         type: RETRIEVE_TODOS,

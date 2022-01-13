@@ -1,7 +1,4 @@
 import './App.css';
-//import Expenses from './components/Expenses/Expenses';
-import Home from './components/Home';
-//import About from './components/About';
 
 import React from "react";
 import {
@@ -10,10 +7,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
-// import ReactMeals from './components/ReactMeals';
-// import ToDos from './components/ToDos/ToDos';
-// import ReduxTodos from './components/ToDos/ReduxTodos';
-import Todos from './components/ToDos/ToDos';
+
+import TodosList from './components/ToDos/todos-list.component';
+import AddTodo from './components/ToDos/add-todo.component';
 
 export default function App() {
   return (
@@ -32,20 +28,16 @@ export default function App() {
                 <Link className='nav-link' to="/">Home</Link>
               </li>
               <li class="nav-item">
-                <Link className='nav-link' to="/to_dos">ToDos - RubyOnRails Backend</Link>
+                <Link className='nav-link' to="/add_todo">Add Todo</Link>
               </li>
-              {/* <li class="nav-item">
-                <Link className='nav-link' to="/react_meals">ReactMeals</Link>
-              </li> */}
             </ul>
           </div>
         </div>
       </nav>
 
         <Routes>
-          <Route exact path="/" element={<Home />}/>
-          {/* <Route exact path="/react_meals" element={<ReactMeals />}/> */}
-          <Route exact path="/to_dos" element={<Todos />}/>
+          <Route exact path="/" element={<TodosList />}/>
+          <Route exact path="/add_todo" element={<AddTodo />}/>
         </Routes>
       </div>
     </Router>
