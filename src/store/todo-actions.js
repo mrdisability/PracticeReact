@@ -1,11 +1,14 @@
 import { uiActions } from './ui-slice';
 import { toDoActions } from './todo-slice';
 
+//http://127.0.0.1:3000/todos/
+//https://practicereact-7a9bd-default-rtdb.firebaseio.com/toDos.json
+
 export const fetchToDoData = () => {
   return async (dispatch) => {
     const fetchData = async () => {
       const response = await fetch(
-        'https://practicereact-7a9bd-default-rtdb.firebaseio.com/toDos.json'
+        'http://127.0.0.1:3000/todos/'
       );
 
       if (!response.ok) {
@@ -21,8 +24,6 @@ export const fetchToDoData = () => {
 
     try {
       const toDoData = await fetchData();
-
-      //console.log(toDoData);
 
       dispatch(
         toDoActions.replaceToDos({

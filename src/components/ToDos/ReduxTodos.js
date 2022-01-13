@@ -34,7 +34,7 @@ function ReduxTodos() {
         <ul className='list-group'>
             {Object.keys(toDos).map((key, index) => (
                 <li class="list-group-item" key={key}>
-                    {toDos[key].toDo}
+                    {toDos[key].todo}
                 </li>
             ))}  
         </ul>

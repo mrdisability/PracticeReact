@@ -31,11 +31,11 @@ export default function App() {
                 <Link className='nav-link' to="/">Home</Link>
               </li>
               <li class="nav-item">
+                <Link className='nav-link' to="/to_dos">ToDos - RubyOnRails Backend</Link>
+              </li>
+              {/* <li class="nav-item">
                 <Link className='nav-link' to="/react_meals">ReactMeals</Link>
-              </li>
-              <li class="nav-item">
-                <Link className='nav-link' to="/to_dos">ToDos</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -43,7 +43,7 @@ export default function App() {
 
         <Routes>
           <Route exact path="/" element={<Home />}/>
-          <Route exact path="/react_meals" element={<ReactMeals />}/>
+          {/* <Route exact path="/react_meals" element={<ReactMeals />}/> */}
           <Route exact path="/to_dos" element={<ReduxTodos />}/>
         </Routes>
       </div>
