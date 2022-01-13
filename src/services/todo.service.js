@@ -25,9 +25,10 @@ class TodoDataService {
     return http.delete(`/todos`);
   }
 
-  findByCompleted(completed) {
-    return http.get(`/todos?completed=${completed}`);
-  }
+  //Add function to ruby on rails back end later
+  // findByCompleted(completed) {
+  //   return http.get(`/todos?completed=${completed}`);
+  // }
 }
 
 export default new TodoDataService();
