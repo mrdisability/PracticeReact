@@ -27,7 +27,7 @@ class AddTodo extends Component {
 
   onChangeCompleted(e) {
     this.setState({
-      completed: e.target.value,
+      completed: e.target.checked,
     });
   }
 
@@ -63,7 +63,7 @@ class AddTodo extends Component {
 
   render() {
     return (
-      <div className="submit-form">
+      <div className="container-fluid submit-form">
         {this.state.submitted ? (
           <div>
             <h4>You submitted successfully!</h4>

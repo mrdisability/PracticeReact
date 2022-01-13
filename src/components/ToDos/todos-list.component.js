@@ -68,7 +68,7 @@ class TodosList extends Component {
     const { todos } = this.props;
 
     return (
-        <div className="list row">
+        <div className="container-fluid list row">
           <div className="col-md-8">
             {/* <div className="input-group mb-3">
               <input
@@ -96,6 +96,7 @@ class TodosList extends Component {
               {todos &&
                 todos.map((todo, index) => (
                   <li 
+                  style={{cursor: "pointer"}}
                     className={
                       "list-group-item " +
                       (index === currentIndex ? "active" : "")

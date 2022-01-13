@@ -3,13 +3,15 @@ import './App.css';
 import React from "react";
 import {
   BrowserRouter as Router,
-  Routes,
+  //Routes,
   Route,
+  Switch,
   Link
 } from "react-router-dom";
 
 import TodosList from './components/ToDos/todos-list.component';
 import AddTodo from './components/ToDos/add-todo.component';
+import Todo from './components/ToDos/todo.component';
 
 export default function App() {
   return (
@@ -35,67 +37,19 @@ export default function App() {
         </div>
       </nav>
 
-        <Routes>
+      <Switch>
+        <Route exact path={["/", "/todos"]} component={TodosList} />
+        <Route exact path="/add_todo" component={AddTodo} />
+        <Route path="/todos/:id" component={Todo} />
+      </Switch>
+
+        {/* <Routes>
           <Route exact path="/" element={<TodosList />}/>
-          <Route exact path="/add_todo" element={<AddTodo />}/>
-        </Routes>
+          <Route exact path="/add_todo" element={<AddTodo />}/> */}
+          {/* <Route exact path="/todos/:id" element={<Todo />} /> */}
+          {/* <Route path="/todos/:id" render={(props) => <Todo {...props} />}/>  */}
+        {/* </Routes> */}
       </div>
     </Router>
   );
 }
-
-/* <ul>
-<li>
-  <Link to="/">Home</Link>
-</li>
-<li>
-  <Link to="/practice">Practice</Link>
-</li>
-</ul> */
-
-/* <hr /> */
-
-/*
-A <Switch> looks through all its children <Route>
-elements and renders the first one whose path
-matches the current URL. Use a <Switch> any time
-you have multiple routes, but you want only one
-of them to render at a time
-*/
-
-//import ExpenseTitleDate from './components/ExpenseTitleDate';
-
-//Component is just a javascript function
-// function App() {
-
-//   const expenses = [
-//     {
-//       id: '1',
-//       title: 'Title',
-//       amount: 100,
-//       date: new Date()
-//     },
-//     {
-//       id: '2',
-//       title: 'Title',
-//       amount: 100,
-//       date: new Date()
-//     },
-//     {
-//       id: '3',
-//       title: 'Title',
-//       amount: 100,
-//       date: new Date()
-//     }
-//   ]
-
-//   return (
-//     <div>
-//         <Expenses
-//           expenses={expenses}
-//         ></Expenses>
-//     </div>
-//   );
-// }
-
-// export default App;
