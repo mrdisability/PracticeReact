@@ -104,7 +104,8 @@ class TodosList extends Component {
                     onClick={() => this.setActiveTodo(todo, index)}
                     key={index}
                   >
-                    {todo.todo}
+                    {todo.todo} {todo.completed ? <span style={{color: "white"}} class="badge bg-success">Completed</span>
+                      : <span style={{color: "white"}} class="badge bg-danger">Incomplete</span>}
                   </li>
                 ))}
             </ul>

@@ -20,7 +20,7 @@ class Todo extends Component {
       currentTodo: {
         id: null,
         todo: "",
-        completed: "",
+        completed: false,
       },
       message: "",
     };
@@ -142,7 +142,7 @@ class Todo extends Component {
                 type="checkbox" 
                 id="completed"
                 required
-                value={this.state.completed}
+                checked={currentTodo.completed}
                 onChange={this.onChangeCompleted}
                 name="completed"/>
               <label className="form-check-label" htmlFor="completed">
