@@ -1,5 +1,7 @@
 # PracticeReact
 
-Learning, practicing, and keeping up to date with React. 
+Learning, practicing, and keeping up to date with React.
 
-## React Redux Todos: https://github.com/thesamoanppprogrammer/ReactReduxTodos
+## React, Redux
+
+## React Redux Todos (Updated): https://github.com/thesamoanppprogrammer/ReactReduxTodos
